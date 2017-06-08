@@ -1,1 +1,1 @@
-.\packages\NuGet.CommandLine.4.1.0\tools\NuGet.exe push .\BeautifulWeb.1.0.0.7.nupkg -source https://www.nuget.org/api/v2/package
+.\packages\NuGet.CommandLine.4.1.0\tools\NuGet.exe push .\BeautifulWeb.1.0.0.10.nupkg -source https://www.nuget.org/api/v2/package

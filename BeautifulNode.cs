@@ -11,13 +11,9 @@ namespace BeautifulWeb
             HtmlNode = htmlNode;
         }
 
-        public string ToText()
-        {
-            return HtmlNode?.InnerText.Trim();
-        }
-
         public string Href => HtmlNode?.GetAttributeValue("href", string.Empty);
-        public string InnerText => HtmlNode?.InnerText.Trim();
+        public string Src => HtmlNode?.GetAttributeValue("src", string.Empty);
+        public string Text => HtmlNode?.InnerText.Trim();
         public bool HasValue => HtmlNode != null;
     }
 }
