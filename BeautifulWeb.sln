@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautifulWeb", "BeautifulWeb.csproj", "{0D875A55-4EC3-476E-B5E2-D9D66A52EBDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautifulWeb.Tests", "BeautifulWeb.Tests\BeautifulWeb.Tests.csproj", "{1815BB24-3D7A-4350-9529-15511A1D7ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0D875A55-4EC3-476E-B5E2-D9D66A52EBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D875A55-4EC3-476E-B5E2-D9D66A52EBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D875A55-4EC3-476E-B5E2-D9D66A52EBDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1815BB24-3D7A-4350-9529-15511A1D7ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1815BB24-3D7A-4350-9529-15511A1D7ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1815BB24-3D7A-4350-9529-15511A1D7ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1815BB24-3D7A-4350-9529-15511A1D7ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

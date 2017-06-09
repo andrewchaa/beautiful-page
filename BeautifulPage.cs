@@ -29,7 +29,7 @@ namespace BeautifulWeb
         public IEnumerable<BeautifulNode> SelectNodes(string xpath)
         {
             var nodes = _htmlNode.SelectNodes(xpath);
-            if (!nodes.Any()) return new List<BeautifulNode>();
+            if (nodes == null || !nodes.Any()) return new List<BeautifulNode>();
 
             if (xpath.EndsWith("option"))
             {
