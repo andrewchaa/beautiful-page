@@ -6,29 +6,29 @@ namespace BeautifulWeb
 {
     public class BeautifulPage
     {
-        private readonly HtmlNode _htmlNode;
+        public HtmlNode DocumentNode { get; }
 
         public BeautifulPage(string pageContent)
         {
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(pageContent);
 
-            _htmlNode = htmlDocument.DocumentNode;
+            DocumentNode = htmlDocument.DocumentNode;
         }
 
         public BeautifulNode SelectNode(string xpath)
         {
             if (xpath.EndsWith("option"))
             {
-                return new BeautifulNode(_htmlNode.SelectSingleNode(xpath).NextSibling);
+                return new BeautifulNode(DocumentNode.SelectSingleNode(xpath).NextSibling);
             }
 
-            return new BeautifulNode(_htmlNode.SelectSingleNode(xpath));
+            return new BeautifulNode(DocumentNode.SelectSingleNode(xpath));
         }
 
         public IEnumerable<BeautifulNode> SelectNodes(string xpath)
         {
-            var nodes = _htmlNode.SelectNodes(xpath);
+            var nodes = DocumentNode.SelectNodes(xpath);
             if (nodes == null || !nodes.Any()) return new List<BeautifulNode>();
 
             if (xpath.EndsWith("option"))
