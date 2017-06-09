@@ -23,5 +23,10 @@ namespace BeautifulWeb
         public string Text => HtmlNode?.InnerText.Trim();
         public string Name => HtmlNode?.Name;
         public bool HasValue => HtmlNode != null;
+
+        public string GetAttribute(string attributeName)
+        {
+            return HtmlNode?.GetAttributeValue(attributeName, string.Empty);
+        }
     }
 }
