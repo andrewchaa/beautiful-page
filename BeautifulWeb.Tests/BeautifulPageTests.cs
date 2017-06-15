@@ -31,13 +31,13 @@ namespace BeautifulWeb.Tests
 
             Establish context = () =>
             {
-                string pageContent = "<div id=\"test\">Paragraph1<br />Paragraph2</div>";
+                string pageContent = "<div id=\"test\">Paragraph1\r\nParagraph2</div>";
                 _page = new BeautifulPage(pageContent);
             };
 
             Because of = () => _node = _page.SelectNode("//div[@id='test']");
 
-            It should_replace_br_with_carriage_return = () => _node.Text.ShouldEqual("Paragraph1\r\nParagraph2");
+            It should_replace_br_with_carriage_return = () => _node.Text.ShouldEqual("Paragraph1<br />Paragraph2");
         }
 
 
