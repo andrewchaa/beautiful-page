@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BeautifulPage.nuspec" />
-    <None Include="build-package.bat" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

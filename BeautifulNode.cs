@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System.Web;
 
 namespace BeautifulWeb
 {
@@ -20,7 +21,7 @@ namespace BeautifulWeb
         public string Title => HtmlNode?.GetAttributeValue("title", string.Empty);
         public string Value => HtmlNode?.GetAttributeValue("value", string.Empty);
         public string Html => HtmlNode?.InnerHtml.Trim();
-        public string Text => HtmlNode?.InnerText.Trim();
+        public string Text => HttpUtility.HtmlDecode(HtmlNode?.InnerText.Trim());
         public string DescriptionText => HtmlNode?.InnerText.Trim().Replace("\r\n", "<br />").Replace("\n", "<br />");
         public string Name => HtmlNode?.Name;
         public bool HasValue => HtmlNode != null;
